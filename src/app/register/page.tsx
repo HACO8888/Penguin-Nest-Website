@@ -16,7 +16,7 @@ export default function Register() {
                                 <label htmlFor="logo" className="block text-sm font-medium leading-6 text-white">戰隊Logo (限制 <span className="bg-[#355581] rounded-sm font-bold px-[0.1rem]">128*128</span> )<span className="text-red-500 ml-[0.2rem]">*</span></label>
                             </div>
                             <div className="mt-2">
-                                <input id="logo" name="logo" type="file" required className="bg-white block w-full rounded-md border-0 px-2 py-1 text-black shadow-sm sm:text-sm sm:leading-6" />
+                                <input id="logo" name="logo" type="file" accept="image/*" required className="bg-white block w-full rounded-md border-0 px-2 py-1 text-black shadow-sm sm:text-sm sm:leading-6" />
                             </div>
                         </div>
                         <div>
