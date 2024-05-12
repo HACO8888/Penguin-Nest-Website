@@ -37,6 +37,17 @@ export default function Home() {
       <div className="text-center justify-center align-middle mt-[2rem] mx-[1rem] mb-[2rem] md:text-lg">
         <Link className="py-2 px-5 bg-[#355581] rounded-full" href={"https://discord.gg/PSefukqYyb"} target="_blenk">加入 Discord 群組</Link>
       </div>
+      <div className="w-full text-center mt-[5rem] flex flex-col mb-[5rem]">
+        <h1 className="text-[2rem] font-extrabold underline">合作廠商</h1>
+        <div className="flex gap-5 mx-auto max-sm:flex-col mt-[1rem]">
+          <div className="w-[15rem] h-[5rem] bg-white rounded-lg flex px-5">
+            <img src="/images/lazco-logo.png" className="my-auto" alt="lazco" />
+          </div>
+          <div className="w-[15rem] h-[5rem] bg-white rounded-lg flex px-5">
+            <img src="/images/lunarhosts-logo.png" className="my-auto" alt="lunarhosts" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
