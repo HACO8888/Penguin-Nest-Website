@@ -1,4 +1,4 @@
-import { models, model, Schema } from 'mongoose';
+import { models, model, Schema } from "mongoose";
 
 const RegisterSchema: Schema = new Schema({
   name: {
@@ -9,7 +9,7 @@ const RegisterSchema: Schema = new Schema({
     type: String,
     required: true,
   },
- leader: {
+  leader: {
     type: String,
     required: true,
   },
@@ -37,6 +37,4 @@ const RegisterSchema: Schema = new Schema({
   }
 });
 
-const RegisterModel = models.Register || model('Register', RegisterSchema);
-
-export default RegisterModel
+export default models.Register || model("Register", RegisterSchema);
