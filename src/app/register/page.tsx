@@ -79,7 +79,7 @@ export default function Register() {
               </div>
             </div>
             <div>
-              <label htmlFor="leader" className="block text-sm font-medium leading-6 text-white">報團人兼團長 DC ID<span className="text-red-500 ml-[0.2rem]">*</span></label>
+              <label htmlFor="leader" className="block text-sm font-medium leading-6 text-white">報團人兼隊長 DC ID<span className="text-red-500 ml-[0.2rem]">*</span></label>
               <div className="mt-2">
                 <input id="leader" name="leader" type="text" placeholder="mrbandi.dev" required className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
               </div>
@@ -118,6 +118,48 @@ export default function Register() {
               <label htmlFor="alternate2" className="block text-sm font-medium leading-6 text-white">候補隊員二 DC ID</label>
               <div className="mt-2">
                 <input id="alternate2" name="alternate2" type="text" placeholder="haco.tw" className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="leader_r" className="block text-sm font-medium leading-6 text-white">報團人兼隊長 RiogGame ID<span className="text-red-500 ml-[0.2rem]">*</span></label>
+              <div className="mt-2">
+                <input id="leader_r" name="leader_r" type="text" placeholder="Haco#54088" required className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="member1_r" className="block text-sm font-medium leading-6 text-white">隊員一 RiogGame ID<span className="text-red-500 ml-[0.2rem]">*</span></label>
+              <div className="mt-2">
+                <input id="member1_r" name="member1_r" type="text" placeholder="MrBandi#30668" required className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="member2_r" className="block text-sm font-medium leading-6 text-white">隊員二 RiogGame ID<span className="text-red-500 ml-[0.2rem]">*</span></label>
+              <div className="mt-2">
+                <input id="member2_r" name="member2_r" type="text" placeholder="MrBandi#30668" required className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="member3_r" className="block text-sm font-medium leading-6 text-white">隊員三 RiogGame ID<span className="text-red-500 ml-[0.2rem]">*</span></label>
+              <div className="mt-2">
+                <input id="member3_r" name="member3_r" type="text" placeholder="MrBandi#30668" required className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="member4_r" className="block text-sm font-medium leading-6 text-white">隊員四 RiogGame ID<span className="text-red-500 ml-[0.2rem]">*</span></label>
+              <div className="mt-2">
+                <input id="member4_r" name="member4_r" type="text" placeholder="MrBandi#30668" required className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="alternate1_r" className="block text-sm font-medium leading-6 text-white">候補隊員一 RiogGame ID</label>
+              <div className="mt-2">
+                <input id="alternate1_r" name="alternate1_r" type="text" placeholder="Duck#1234" className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="alternate2_r" className="block text-sm font-medium leading-6 text-white">候補隊員二 RiogGame ID</label>
+              <div className="mt-2">
+                <input id="alternate2_r" name="alternate2_r" type="text" placeholder="Duck#1234" className="bg-white block w-full rounded-md border-0 px-2 py-1.5 text-black shadow-sm sm:text-sm sm:leading-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled={disabled} />
               </div>
             </div>
             <span className="text-red-500 ml-[0.2rem]">*</span>報名送出即同意所有比賽規則

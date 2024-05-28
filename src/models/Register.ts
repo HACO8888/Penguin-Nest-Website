@@ -34,6 +34,32 @@ const RegisterSchema: Schema = new Schema({
   },
   alternate2: {
     type: String
+  },
+  leader_r: {
+    type: String,
+    required: true,
+  },
+  member1_r: {
+    type: String,
+    required: true,
+  },
+  member2_r: {
+    type: String,
+    required: true,
+  },
+  member3_r: {
+    type: String,
+    required: true,
+  },
+  member4_r: {
+    type: String,
+    required: true,
+  },
+  alternate1_r: {
+    type: String
+  },
+  alternate2_r: {
+    type: String
   }
 });
 

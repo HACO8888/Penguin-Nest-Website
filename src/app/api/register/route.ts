@@ -38,7 +38,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ code: 1002, title: "報名失敗", message: "上船戰隊 Logo 時發生錯誤，請稍後再重試。" });
   }
 
-  const db = mongo();
+  mongo();
 
   const name = data.get("name");
   const leader = data.get("leader");
@@ -48,6 +48,13 @@ export async function POST(request: Request) {
   const member4 = data.get("member4");
   const alternate1 = data.get("alternate1");
   const alternate2 = data.get("alternate2");
+  const leader_r = data.get("leader");
+  const member1_r = data.get("member1");
+  const member2_r = data.get("member2");
+  const member3_r = data.get("member3");
+  const member4_r = data.get("member4");
+  const alternate1_r = data.get("alternate1");
+  const alternate2_r = data.get("alternate2");
 
   if (!name || name === "") {
     return NextResponse.json({ code: 1003, title: "報名失敗", message: "您沒有填寫戰隊名稱，請重新填寫再送出報名。" });
@@ -73,6 +80,26 @@ export async function POST(request: Request) {
     return NextResponse.json({ code: 1008, title: "報名失敗", message: "您沒有填寫隊員4的 Discord 帳號，請重新填寫再送出報名。" });
   }
 
+  if (!leader_r || leader_r === "") {
+    return NextResponse.json({ code: 1009, title: "報名失敗", message: "您沒有填寫隊長的 RiogGame 帳號，請重新填寫再送出報名。" });
+  }
+
+  if (!member1_r || member1_r === "") {
+    return NextResponse.json({ code: 1010, title: "報名失敗", message: "您沒有填寫隊員1的 RiogGame 帳號，請重新填寫再送出報名。" });
+  }
+
+  if (!member2_r || member2_r === "") {
+    return NextResponse.json({ code: 1011, title: "報名失敗", message: "您沒有填寫隊員2的 RiogGame 帳號，請重新填寫再送出報名。" });
+  }
+
+  if (!member3_r || member3_r === "") {
+    return NextResponse.json({ code: 1012, title: "報名失敗", message: "您沒有填寫隊員3的 RiogGame 帳號，請重新填寫再送出報名。" });
+  }
+
+  if (!member4_r || member4_r === "") {
+    return NextResponse.json({ code: 1013, title: "報名失敗", message: "您沒有填寫隊員4的 RiogGame 帳號，請重新填寫再送出報名。" });
+  }
+
   const register_data = new RegisterModel({
     name: name,
     logo: `https://cdn.lazco.dev/${logo.name.split(".")[0]}-${time}.${logo.name.split(".")[1]}`,
@@ -83,6 +110,13 @@ export async function POST(request: Request) {
     member4: member4,
     alternate1: alternate1,
     alternate2: alternate2,
+    leader_r: leader_r,
+    member1_r: member1_r,
+    member2_r: member2_r,
+    member3_r: member3_r,
+    member4_r: member4_r,
+    alternate1_r: alternate1_r,
+    alternate2_r: alternate2_r,
   });
 
   try {
