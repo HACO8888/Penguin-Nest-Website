@@ -3,6 +3,7 @@
 // Modules
 import { NextResponse } from "next/server";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
+import axios from "axios";
 
 // Libs
 import { r2 } from "@/libs/r2";
@@ -124,6 +125,29 @@ export async function POST(request: Request) {
   } catch (e) {
     console.log(e);
   }
+
+  const webhookData = new FormData();
+  webhookData.append("name", name);
+  webhookData.append("logo", `https://cdn.lazco.dev/${logo.name.split(".")[0]}-${time}.${logo.name.split(".")[1]}`);
+  webhookData.append("leader", leader);
+  webhookData.append("member1", member1);
+  webhookData.append("member2", member2);
+  webhookData.append("member3", member3);
+  webhookData.append("member4", member4);
+  webhookData.append("alternate1", alternate1 || "Null");
+  webhookData.append("alternate2", alternate2 || "Null");
+  webhookData.append("leader_r", leader_r);
+  webhookData.append("member1_r", member1_r);
+  webhookData.append("member2_r", member2_r);
+  webhookData.append("member3_r", member3_r);
+  webhookData.append("member4_r", member4_r);
+  webhookData.append("alternate1_r", alternate1_r || "Null");
+  webhookData.append("alternate2_r", alternate2_r || "Null");
+
+  await fetch(`${process.env.NEXT_PUBLIC_URL}/api/discord`, {
+    method: "POST",
+    body: webhookData,
+  });
 
   return NextResponse.json({ code: 1000, title: "報名成功！", message: `<a href="https://cdn.lazco.dev/${logo.name.split(".")[0]}-${time}.${logo.name.split(".")[1]}" target="_blank" style="color: blue;">點我查看 Logo</a>` });
 }
